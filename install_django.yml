@@ -1,0 +1,7 @@
+---
+# Playbook to set up Django on Ubuntu
+
+- hosts: all
+  user: root
+  roles:
+    - django

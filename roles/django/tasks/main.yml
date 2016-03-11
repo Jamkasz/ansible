@@ -1,2 +1,9 @@
 ---
-# tasks file for django
+- name: Install Python 3 venv
+  apt: name=python3.4-venv update_cache=yes
+
+- name: Create Python 3 virtual environment
+  command: "sudo python3 -m venv {{ venv_dir }}"
+
+- name: Install Django
+  pip: name=django virtualenv={{ venv_dir }}

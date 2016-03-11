@@ -1,2 +1,2 @@
 ---
-# defaults file for django
+venv_dir: /opt/py3venv
