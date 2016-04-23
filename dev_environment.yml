@@ -5,4 +5,5 @@
   sudo: yes
   user: root
   roles:
-    - django
+    - setup_vm
+    - setup_django_env

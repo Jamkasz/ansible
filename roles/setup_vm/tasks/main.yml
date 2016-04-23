@@ -1,0 +1,6 @@
+---
+- name: Install Packages
+  apt: name={{ item }} update_cache=yes
+  with_items:
+  - git
+  - python3.4-venv

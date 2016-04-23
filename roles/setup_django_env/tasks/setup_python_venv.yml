@@ -1,0 +1,12 @@
+---
+- name: Create directory
+  file: state=directory recurse=yes path={{ venv_dir }}
+
+- name: Create Python 3 virtual environment
+  command: "sudo python3 -m venv {{ venv_dir }}"
+
+- name: Set up venv as default environment on login
+  shell: "echo 'source {{ venv_dir }}/bin/activate' > {{ home_dir }}/.bash_profile"
+
+- name: Set up working directory
+  shell: "echo 'cd {{ working_dir }}' >> {{ home_dir }}/.bash_profile"

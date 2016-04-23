@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8000, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -48,7 +48,7 @@ Vagrant.configure(2) do |config|
      vb.gui = false
   #
   #   # Customize the amount of memory on the VM:
-     vb.memory = "1024"
+     vb.memory = "2048"
   end
 
   config.vm.provision "shell", inline: "sudo apt-get install -y python-pip python-dev && sudo pip install ansible==1.9.2 && sudo cp /usr/local/bin/ansible /usr/bin/ansible"
@@ -68,6 +68,6 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision "ansible_local" do |ansible|
-     ansible.playbook = "install_django.yml"
+     ansible.playbook = "dev_environment.yml"
   end
 end

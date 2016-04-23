@@ -1,0 +1,4 @@
+---
+venv_dir: /home/vagrant/venvs/py3venv
+home_dir: /home/vagrant
+working_dir: /vagrant

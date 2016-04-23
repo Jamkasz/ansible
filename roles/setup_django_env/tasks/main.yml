@@ -1,0 +1,3 @@
+---
+- include: setup_python_venv.yml
+- include: install_django.yml
