@@ -68,6 +68,6 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   # config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.provision "ansible_local" do |ansible|
-     ansible.playbook = "ansible/install_django.yml"
+     ansible.playbook = "install_django.yml"
   end
 end
