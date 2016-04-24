@@ -10,3 +10,6 @@
 
 - name: Set up working directory
   shell: "echo 'cd {{ working_dir }}' >> {{ home_dir }}/.bash_profile"
+
+- name: Set up permissions
+  command: "chown -R vagrant:vagrant {{ venv_dir }}"

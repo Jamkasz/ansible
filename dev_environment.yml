@@ -6,4 +6,5 @@
   user: root
   roles:
     - setup_vm
+    - postgresql
     - setup_django_env

@@ -3,3 +3,4 @@
   pip: name={{ item }} virtualenv={{ venv_dir }}
   with_items:
   - django
+  - psycopg2
