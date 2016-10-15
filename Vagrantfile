@@ -51,7 +51,10 @@ Vagrant.configure(2) do |config|
      vb.memory = "2048"
   end
 
-  config.vm.provision "shell", inline: "sudo apt-get install -y python-pip python-dev && sudo pip install ansible==1.9.2 && sudo cp /usr/local/bin/ansible /usr/bin/ansible"
+  config.vm.provision "shell", inline: "sudo apt-get update"
+  config.vm.provision "shell", inline: "sudo apt-get install -y python-pip libssl-dev libffi-dev python-dev"
+  config.vm.provision "shell", inline: "sudo pip install ansible"
+  config.vm.provision "shell", inline: "sudo cp /usr/local/bin/ansible /usr/bin/ansible"
   
   # View the documentation for the provider you are using for more
   # information on available options.
